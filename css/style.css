@@ -4,3 +4,6 @@
     box-shadow: 5px 5px 8px;
     padding: 50px;
 }
+#transation-area{
+    display: none;
+}
