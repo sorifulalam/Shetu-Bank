@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div class="container">
+    <div id="log-in-area" class="container">
         <h1 class="bank-taitel text-center mt-5">Welcome To Shetu-Bank</h1>
     <div class="submit-area mt-5">
         <h3 class="">Sing-in</h3>
@@ -21,7 +21,8 @@
 <script>
     const loginBtn = document.getElementById('login')
     loginBtn.addEventListener('click',function(){
-        console.log('amale click marche')
+       const loginArea = document.getElementById('log-in-area')
+       loginArea.style.display="none"
     })
 </script>
 
