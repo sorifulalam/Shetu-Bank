@@ -3,5 +3,5 @@ const loginBtn = document.getElementById('login')
        const loginArea = document.getElementById('log-in-area')
        loginArea.style.display="none";
         const transactionArea = document.getElementById('transation-area')
-        transactionArea.style.display="block"
+        transactionArea.style.display="block" 
     })
