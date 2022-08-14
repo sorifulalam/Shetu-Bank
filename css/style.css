@@ -12,11 +12,17 @@
     margin-top: 150px;
 }
 .deposit{
-    background-color: slateblue;
+    background-color: rgb(78, 65, 161);
 }
 .withdraw{
-    background-color: slategray;
+    background-color: rgb(41, 86, 131);
 }
 .balance{
-    background-color: rgb(182, 176, 101);
+    background-color: rgb(56, 55, 41);
+}
+.status{
+    color: white;
+    padding: 20px;
+    margin: 10px;
+    font-weight: bolder;
 }
