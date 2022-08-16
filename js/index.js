@@ -12,6 +12,7 @@ const loginBtn = document.getElementById('login')
  
     const depositBtn = document.getElementById('adddeposit')
     depositBtn.addEventListener('click',function(){
+        // console.log('shetu')
         const despositAmount = document.getElementById('depositamount').value
         const depositNumber = parseFloat(despositAmount)
     })
