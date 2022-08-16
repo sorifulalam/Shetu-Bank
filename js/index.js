@@ -15,4 +15,19 @@ const loginBtn = document.getElementById('login')
         // console.log('shetu')
         const despositAmount = document.getElementById('depositamount').value
         const depositNumber = parseFloat(despositAmount)
+       // console.log(depositNumber)
+       const curentDeposit = document.getElementById('curentDeposit').innerText
+       const curenDepositNumber = parseFloat(curentDeposit)
+       //console.log()
+       const totalDeposit = depositNumber + curenDepositNumber;
+       document.getElementById('curentDeposit').innerText =totalDeposit
+       
+
+        const curentBalance = document.getElementById('curenBalance').innerText
+        const curentBalanceNumber = parseFloat(curentBalance)
+        const curentBalanceTotal = depositNumber + curentBalanceNumber
+        document.getElementById('curenBalance').innerText = curentBalanceTotal
+
+        document.getElementById('depositamount').value=""
     })
+
