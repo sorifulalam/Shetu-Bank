@@ -1,10 +1,12 @@
 body{
     padding: 100px;
+    background-color: antiquewhite;
 }
 .submit-area{
     border-radius: 10px;
     box-shadow: 5px 5px 8px;
     padding: 50px;
+    background-color: aliceblue;
 }
 #transaction-area{
     display: none;

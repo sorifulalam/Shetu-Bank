@@ -35,6 +35,21 @@ const loginBtn = document.getElementById('login')
         spanUpdateText('curenBalance' ,depositNumber);
       
     })
+
+
+        // Withdraw section event handelar
+
+    const withdrawBtn = document.getElementById('addwithdraw')
+    withdrawBtn.addEventListener('click',function(){
+        const withdrawAmount= document.getElementById('withdrawAmount').value;
+        const withdrawNumber = parseFloat(withdrawAmount)
+        document.getElementById('withdrawAmount').value="";
+        spanUpdateText('curentWithdraw',withdrawNumber)
+        spanUpdateText('curenBalance', -1 * withdrawNumber)
+       
+    })
+
+
 // multi handelar function deposit and withdraw
 
     function spanUpdateText(id, depositNumber,withdrawNumber){
@@ -44,13 +59,5 @@ const loginBtn = document.getElementById('login')
         document.getElementById(id).innerText=totalAmount;
     }
 
-    // Withdraw section event handelar
-
-    const withdrawBtn = document.getElementById('addwithdraw')
-    withdrawBtn.addEventListener('click',function(){
-        const withdrawAmount= document.getElementById('withdrawAmount').value;
-        const withdrawNumber = parseFloat(withdrawAmount)
-        document.getElementById('withdrawAmount').value="";
-        spanUpdateText('curentWithdraw',withdrawNumber)
-    })
+    
     
