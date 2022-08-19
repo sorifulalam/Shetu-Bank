@@ -31,14 +31,26 @@ const loginBtn = document.getElementById('login')
         document.getElementById('depositAmount').value=""
 
        
-        spanUpdateText('curentDeposit',depositNumber)
+        spanUpdateText('curentDeposit',depositNumber);
         spanUpdateText('curenBalance' ,depositNumber);
       
     })
+// multi handelar function deposit and withdraw
 
-    function spanUpdateText(id, depositNumber){
+    function spanUpdateText(id, depositNumber,withdrawNumber){
         const current= document.getElementById(id).innerText;
         const currentNumber=parseFloat(current);
         const totalAmount=currentNumber+depositNumber;
         document.getElementById(id).innerText=totalAmount;
     }
+
+    // Withdraw section event handelar
+
+    const withdrawBtn = document.getElementById('addwithdraw')
+    withdrawBtn.addEventListener('click',function(){
+        const withdrawAmount= document.getElementById('withdrawAmount').value;
+        const withdrawNumber = parseFloat(withdrawAmount)
+        document.getElementById('withdrawAmount').value="";
+        spanUpdateText('curentWithdraw',withdrawNumber)
+    })
+    
