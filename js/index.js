@@ -15,24 +15,16 @@ const loginBtn = document.getElementById('login')
         // console.log('shetu')
         const despositAmount = document.getElementById('depositAmount').value
         const depositNumber = parseFloat(despositAmount)
-       // console.log(depositNumber)
-    //    const curentDeposit = document.getElementById('curentDeposit').innerText
-    //    const curenDepositNumber = parseFloat(curentDeposit)
-    //    //console.log()
-    //    const totalDeposit = depositNumber + curenDepositNumber;
-    //    document.getElementById('curentDeposit').innerText =totalDeposit
-       
-    //   const curentBalance = document.getElementById('curenBalance').innerText
-    // const curentBalanceNumber = parseFloat(curentBalance)
-    // const curentBalanceTotal = depositNumber + curentBalanceNumber
-    // document.getElementById('curenBalance').innerText = curentBalanceTotal
-
-
+       if(depositNumber<0){
+        alert(`Deposit Number can't to Nagative Number`)
+       }
+       else{
         document.getElementById('depositAmount').value=""
-
-       
         spanUpdateText('curentDeposit',depositNumber);
         spanUpdateText('curenBalance' ,depositNumber);
+       }
+    
+       
       
     })
 
@@ -43,9 +35,16 @@ const loginBtn = document.getElementById('login')
     withdrawBtn.addEventListener('click',function(){
         const withdrawAmount= document.getElementById('withdrawAmount').value;
         const withdrawNumber = parseFloat(withdrawAmount)
-        document.getElementById('withdrawAmount').value="";
+
+        if(withdrawNumber < 0){
+            alert(`Deposit Number can't to Nagative Number`)
+        }
+        else{
+            document.getElementById('withdrawAmount').value="";
         spanUpdateText('curentWithdraw',withdrawNumber)
         spanUpdateText('curenBalance', -1 * withdrawNumber)
+        }
+        
        
     })
 
